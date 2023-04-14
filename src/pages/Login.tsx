@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import image from "../assets/images/image.png";
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
+import "../assets/css/login.css"
 
 type Props = {};
 
