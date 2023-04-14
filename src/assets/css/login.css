@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish');
- body {
-  	 /* justify-content: center; */
-	 /* height: 100vh; */
-	 font-family: 'Mulish', sans-serif;
-	 background-image: url("../images/fondologin.png");
-   background-position: center;
-	 background-repeat: no-repeat;
-	 background-size: cover;
+
+body {
+  /* justify-content: center; */
+  /* height: 100vh; */
+  font-family: 'Mulish', sans-serif;
+  background-image: url("../images/fondologin.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.notification {
+  position: absolute;
+  float: right;
+  margin: 10px 0 0 5px;
+  width: 350px;
+  height: 50px;
 }
 
 .login-container {
@@ -17,83 +26,93 @@
   align-items: center;
 }
 
- .login-container .form-body {
-	 font-family: 'Mulish', sans-serif;
-	 width: 600px;
-   justify-content: center;
-     /* margin: 10% 35%; */
-	 height: auto;
-     /* position: absolute; */
-	 border-radius: 10px;
-	 border-top-left-radius: 50px;
-	 border-bottom-right-radius: 50px;
-	 border: solid 5px #fa7da2;
-/* 	 margin: 10px; */
-	 background: #f7f1e5;
-	 border-radius: 12px;
+.login-container .form-body {
+  font-family: 'Mulish', sans-serif;
+  width: 600px;
+  justify-content: center;
+  height: auto;
+  border-radius: 10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: solid 5px #fa7da2;
+  background: #f7f1e5;
+  border-radius: 12px;
 }
- .login-container .form-body img {
-	 width: 150px;
-	 display: block;
-	 margin: 20px auto;
+
+.login-container .form-body img {
+  width: 150px;
+  display: block;
+  margin: 20px auto;
 }
- .login-container .form-body .text {
-	 text-align: center;
-	 font-size: 1.5rem;
-	 font-weight: 600;
-	 color: black;
-	 margin-bottom: 25px;
+
+.login-container .form-body .text {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 25px;
 }
- .login-container .form-body input {
-	 display: block;
-	 margin: auto;
-	 height: 40px;
-	 width: 75%;
-	 padding-left: 10px;
-	 color: black;
-	 border: 1px solid black;
-	 border-radius: 2px;
-	 font-family: Verdana, Geneva, Tahoma, sans-serif;
-	 background-color: #c6b8c9;
-	 border-top-left-radius: 10px;
-	 border-bottom-right-radius: 10px;
-	 font-size: 1rem;
-	 outline: none;
+
+.login-container .form-body input {
+  display: block;
+  margin: auto;
+  height: 40px;
+  width: 75%;
+  padding-left: 10px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #cfc1d1;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+
 }
- .login-container .form-body input[type="password"] {
-	 margin-top: 20px;
+.login-container .form-body input text {
+  color:black;
 }
- .login-container .form-body input:hover {
-	 transition: 0.1s;
-	 border: 3px solid #ecbde0;
-	 color: #5a0645;
+
+.login-container .form-body input[type="password"] {
+  margin-top: 20px;
 }
- .login-container .form-body .login-form button {
-	 display: block;
-	 margin: auto;
-	 margin-top: 25px;
-	 margin-bottom: 30px;
-	 height: 40px;
-	 width: 35%;
-	 background: #fa7da2;
-	 color: black;
-	 cursor: pointer;
-	 outline: none;
-	 border: 2px solid aliceblue;
-	 transition: all 0.4s ease;
-	 text-decoration: none;
+
+.login-container .form-body input:hover {
+  transition: 0.1s;
+  border: 3px solid #ee8fd6;
+  color: #5a0645;
 }
- .login-container .form-body .login-form button:hover {
-	 color: black;
-	 border: solid 5px #d6b7f0;
-	 background: #ac6ee7;
+
+.login-container .form-body .login-form button {
+  display: block;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  height: 40px;
+  width: 35%;
+  background: rgb(255, 130, 168);
+  color: black;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid rgb(203, 204, 206);
+  transition: all 0.1s ease;
+  text-decoration: none;
+  font-size:15px;
 }
- .login-container .form-body .login-form a {
-	 text-decoration: none;
-	 color: black;
+
+.login-container .form-body .login-form button:hover {
+  color: black;
+  border: solid 4px #d6b7f0;
+  border-style: ridge;
+  background: #ac6ee7;
 }
- ::placeholder {
-	 font-size: 1rem;
-	 color: rgba(75, 75, 75, 0.747);
+.login-container .form-body .login-form a {
+  text-decoration: none;
+  color: black;
 }
- 
+
+::placeholder {
+  font-size: 1rem;
+  color: rgba(75, 75, 75, 0.747);
+}
