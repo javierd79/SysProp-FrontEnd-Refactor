@@ -15,7 +15,7 @@ export default function Login({}: Props) {
     if (localStorage.getItem('user')) {
       history.push('/');
     }
-  }, [user]);
+  }, []);
 
   const handleLogin = () => {
     axios.get(`https://sysprop-production.up.railway.app/usuarios?username=${username}&password=${password}`)
