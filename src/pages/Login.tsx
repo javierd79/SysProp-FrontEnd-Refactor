@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Notification } from "@mantine/core";
 import { useHistory } from "react-router-dom";
 import "../assets/css/login.css"
+import { isNumber } from "../utils";
 
 type Props = {};
 
@@ -19,6 +20,10 @@ export default function Login({}: Props) {
     if (localStorage.getItem('user')) {
       history.push('/');
     }
+
+    if (Number(localStorage.getItem('attempts')) >= 3) {
+      history.push('/login');
+    }
   }, []);
 
   const handleLogin = () => {
@@ -27,12 +32,25 @@ export default function Login({}: Props) {
       password
     })
     .then(() => {
-      localStorage.setItem('user', JSON.stringify({ username, password }));
-      history.push('/');
-      setError('')
+      if (localStorage.getItem('attempts')) {
+        localStorage.removeItem('attempts');
+      }
+      if (Number(localStorage.getItem('attempts')) >= 3) {
+        history.push('/login');
+        setError('Usuario bloqueado')
+        setNotification(true);
+        setTimeout(() => {
+          setNotification(false);
+        }, 3000);
+      } else {
+        localStorage.setItem('user', JSON.stringify({ username, password }));
+        history.push('/');
+        setError('')
+      }
     }).catch((err) => {
       setNotification(true);
       setError(err.response.data.message);
+      localStorage.setItem('attempts', String(Number(localStorage.getItem('attempts')) + 1));
       setTimeout(() => {
         setNotification(false);
       }, 3000);
